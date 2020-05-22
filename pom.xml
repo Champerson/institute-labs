@@ -14,6 +14,16 @@
             <artifactId>jfreechart</artifactId>
             <version>1.5.0</version>
         </dependency>
+        <dependency>
+            <groupId>me.dm7.android.widget</groupId>
+            <artifactId>android.widget</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.algolia</groupId>
+            <artifactId>instantsearch-androidx-core</artifactId>
+            <version>1.15.3</version>
+        </dependency>
     </dependencies>
 
     <build>
