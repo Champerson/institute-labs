@@ -111,9 +111,36 @@ public class RandomSignals {
         ex.setVisible(true);
 
     }
-
-
+   
     public void runFirstLab() {
+        
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setBounds(100, 100, 300, 100);
+ 
+        JPanel panel = new JPanel(new FlowLayout());
+        JTextField textField = new JTextField(10);
+        JLabel label1 = new JLabel("Input omega");
+ 
+        JButton button = new JButton("Calc");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int userInput = 0;
+                try {
+                    userInput = Integer.parseInt(textField.getText());
+                } catch (NumberFormatException e1) {
+                    JOptionPane.showMessageDialog(panel, "Некорректный ввод!");
+                }
+                this.omega = userInput;
+            }
+        });
+ 
+        panel.add(label1);
+        panel.add(textField);
+        panel.add(button);
+        add(panel);
+ 
+        setVisible(true);
 
         JOptionPane.showMessageDialog(null,
                 "Just drag the window on the top in order to see all of the windows!"
