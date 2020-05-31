@@ -65,6 +65,7 @@ public class RandomSignals {
 
     private ArrayList<Complex> generateDFT(ArrayList<Double> xt) {
         ArrayList<Complex> complexNums = new ArrayList<>(nLarge);
+        long start = System.nanoTime();
         for (int k = 0; k < nLarge; k++) {
             complexNums.add(new Complex(0, 0));
             for (int n = 0; n < nLarge; n++) {
@@ -75,6 +76,8 @@ public class RandomSignals {
                 );
             }
         }
+        long end = System.nanoTime();
+        System.out.println(end - start);
         return complexNums;
     }
 
